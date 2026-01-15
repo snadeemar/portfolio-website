@@ -13,51 +13,48 @@
   </style>
 </head>
 <body>
-<p class="p1"><span class="s1">/* General Layout */</span></p>
-<p class="p1"><span class="s1">body {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-family: Arial, sans-serif;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>line-height: 1.6;</span></p>
+<p class="p1"><span class="s1">/* Basic Reset */</span></p>
+<p class="p1"><span class="s1">* {</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin: 0;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background-color: #f4f4f4;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>box-sizing: border-box;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">body {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>line-height: 1.6;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background-color: #f4f4f9;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color: #333;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>flex-direction: column;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>align-items: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 50px;</span></p>
 <p class="p1"><span class="s1">}</span></p>
 <p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1">header {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background: #2c3e50;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color: white;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 1rem 0;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">nav ul {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>list-style: none;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>text-align: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-bottom: 30px;</span></p>
 <p class="p1"><span class="s1">}</span></p>
 <p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">nav ul li {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display: inline;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin: 0 15px;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">nav ul li a {</span></p>
+<p class="p1"><span class="s1">button {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 10px 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size: 1rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background-color: #0078d4;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color: white;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>text-decoration: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-radius: 5px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>cursor: pointer;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>transition: background 0.3s ease;</span></p>
 <p class="p1"><span class="s1">}</span></p>
 <p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">section {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 40px 20px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>max-width: 800px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin: 20px auto;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background: white;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-radius: 8px;</span></p>
+<p class="p1"><span class="s1">button:hover {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background-color: #005a9e;</span></p>
 <p class="p1"><span class="s1">}</span></p>
 <p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">/* Responsiveness for 20-point rubric */</span></p>
-<p class="p1"><span class="s1">@media (max-width: 600px) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>nav ul li {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>display: block;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>margin: 10px 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1">#displayMessage {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-top: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-weight: bold;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color: #0078d4;</span></p>
 <p class="p1"><span class="s1">}</span></p>
 </body>
 </html>

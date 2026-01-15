@@ -13,17 +13,27 @@
   </style>
 </head>
 <body>
-<p class="p1"><span class="s1">// JavaScript Interaction for Portfolio</span></p>
-<p class="p1"><span class="s1">document.addEventListener('DOMContentLoaded', function() {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const contactForm = document.getElementById('contactForm');</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>if (contactForm) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>contactForm.addEventListener('submit', function(event) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>event.preventDefault(); // Prevents page reload</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const userName = document.getElementById('name').value;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>alert('Thank you, ' + userName + '! Your message has been sent successfully.');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1">// Wait for the DOM to fully load</span></p>
+<p class="p1"><span class="s1">document.addEventListener('DOMContentLoaded', () =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const button = document.getElementById('actionButton');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const messageDisplay = document.getElementById('displayMessage');</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// Add a click event listener</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>button.addEventListener('click', () =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const hours = new Date().getHours();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>let greeting;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>if (hours &lt; 12) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>greeting = "Good morning! Ready to code?";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>} else if (hours &lt; 18) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>greeting = "Good afternoon! Project is looking great.";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>greeting = "Good evening! Wrapping up for the day?";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>messageDisplay.textContent = greeting;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>console.log("Greeting updated based on time of day.");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>});</span></p>
 <p class="p1"><span class="s1">});</span></p>
 </body>
 </html>
