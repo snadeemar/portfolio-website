@@ -1,30 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Copilot Web Project</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nadeem | Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>Copilot-Assisted Project</h1>
-        <p>Built with AI, hosted on GitHub</p>
-    </header>
 
-    <main>
-        <section id="content">
-            <h2>Welcome to My Site</h2>
-            <p>This project demonstrates HTML, CSS, and JS integration.</p>
-            <button id="actionButton">Click for a Greeting</button>
-            <p id="displayMessage"></p>
-        </section>
-    </main>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="logo">Nadeem</div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+  </nav>
 
-    <footer>
-        <p>&copy; 2026 Student Portfolio</p>
-    </footer>
+  <!-- Hero Section -->
+  <section id="hero" class="hero fade-in">
+    <div class="hero-content">
+      <h1>Hello, I'm <span>Nadeem</span></h1>
+      <p>Front-End Developer & Data Enthusiast</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn">View My Work</a>
+        <a href="resume.pdf" class="btn btn-outline" target="_blank">Download Résumé</a>
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- Projects Section -->
+  <section id="projects" class="projects fade-in">
+    <h2>My Projects</h2>
+    <p class="section-subtitle">A selection of work showcasing my skills in HTML, CSS, JavaScript, and data.</p>
+
+    <div class="project-grid">
+
+      <div class="project-card">
+        <img src="https://via.placeholder.com/400x220" alt="Portfolio website project screenshot" />
+        <h3>Portfolio Website</h3>
+        <p>A clean, responsive personal portfolio built with HTML, CSS, and JavaScript, deployed on GitHub Pages.</p>
+        <div class="project-links">
+          <a href="#" class="btn-sm">Live Demo</a>
+          <a href="#" class="btn-sm btn-outline">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="https://via.placeholder.com/400x220" alt="JavaScript app project screenshot" />
+        <h3>JavaScript App</h3>
+        <p>An interactive app demonstrating DOM manipulation, event handling, and basic state management in JavaScript.</p>
+        <div class="project-links">
+          <a href="#" class="btn-sm">Live Demo</a>
+          <a href="#" class="btn-sm btn-outline">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="https://via.placeholder.com/400x220" alt="Data dashboard project screenshot" />
+        <h3>Data Dashboard</h3>
+        <p>A simple dashboard layout for visualizing data and analytics using charts and responsive layout techniques.</p>
+        <div class="project-links">
+          <a href="#" class="btn-sm">Live Demo</a>
+          <a href="#" class="btn-sm btn-outline">GitHub</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about fade-in">
+    <h2>About Me</h2>
+    <p>
+      I'm Nadeem, a front-end developer and data enthusiast who enjoys building clean, responsive user interfaces and
+      exploring insights through data. I work with HTML, CSS, JavaScript, and modern tools to create practical, user-focused
+      experiences.
+    </p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact fade-in">
+    <h2>Contact Me</h2>
+    <p class="section-subtitle">Feel free to reach out for collaboration, opportunities, or questions.</p>
+
+    <div class="contact-wrapper">
+      <div class="contact-info">
+        <p><strong>Email:</strong> your-email@example.com</p>
+        <p><strong>Location:</strong> Dubai, United Arab Emirates</p>
+      </div>
+
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you for your message!');">
+        <label for="name">Name</label>
+        <input id="name" type="text" placeholder="Your name" required />
+
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="Your email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" rows="4" placeholder="Your message" required></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
