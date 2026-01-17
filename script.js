@@ -1,22 +1,48 @@
-// Wait for the DOM to fully load
-document.addEventListener('DOMContentLoaded', () => {
-    const button = document.getElementById('actionButton');
-    const messageDisplay = document.getElementById('displayMessage');
+// Scroll to Top Button
+const scrollBtn = document.getElementById("scrollTopBtn");
 
-    // Add a click event listener
-    button.addEventListener('click', () => {
-        const hours = new Date().getHours();
-        let greeting;
-
-        if (hours < 12) {
-            greeting = "Good morning! Ready to code?";
-        } else if (hours < 18) {
-            greeting = "Good afternoon! Project is looking great.";
-        } else {
-            greeting = "Good evening! Wrapping up for the day?";
-        }
-
-        messageDisplay.textContent = greeting;
-        console.log("Greeting updated based on time of day.");
-    });
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    scrollBtn.style.display = "block";
+  } else {
+    scrollBtn.style.display = "none";
+  }
 });
+
+scrollBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+// Dark Mode Toggle
+const themeToggle = document.getElementById("themeToggle");
+const body = document.body;
+
+// Load saved theme
+if (localStorage.getItem("theme") === "dark") {
+  body.classList.add("dark");
+  themeToggle.textContent = "☀️";
+}
+
+themeToggle.addEventListener("click", () => {
+  body.classList.toggle("dark");
+  const isDark = body.classList.contains("dark");
+  themeToggle.textContent = isDark ? "☀️" : "🌙";
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+});
+
+// Fade-in on scroll
+const fadeElements = document.querySelectorAll(".fade-in");
+
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.2 }
+);
+
+fadeElements.forEach(el => observer.observe(el));
